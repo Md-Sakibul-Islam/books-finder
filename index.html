@@ -9,44 +9,63 @@
     <!-- Bootstrap Css  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <style>
+            #profile-book{
+                display: grid;
+                grid-template-columns:repeat(3,1fr);
+            }
+            .card{
+                margin: 10px;
+                border-radius: 10px;
+                padding: 20px;
+                width: 400px;
+                box-shadow: 10px 10px 10px lightgray;
+            }
+            .spinner{
+                display: none;
+            }
+        </style>
 </head>
 
 <body>
-  <!-- Search Area start  -->
+    <!-- Search Area start  -->
 
-  <div class="search-div d-flex justify-content-center mt-5">
-    <div class="input-group mb-3 w-50 ">
-        <input type="text" class="form-control" id="search-text" placeholder="Search Books"
-            aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button class="btn btn-outline-secondary" type="button" id="search-btn">Search</button>
+    <div class="search-div d-flex justify-content-center mt-5">
+        <div class="input-group mb-3 w-50 ">
+            <input type="text" class="form-control" id="search-text" placeholder="Search Books"
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="search-btn">Search</button>
+        </div>
     </div>
-</div>
-<hr>
+    <hr>
 
-<!-- Search Area End -->
+    <!-- Search Area End -->
 
-  <!-- spinner Area Start  -->
-  
-  <div class="d-flex justify-content-center">
-    <div class="spinner-border text-primary spinner" id="spinner" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-</div>
+    <!-- spinner Area Start  -->
 
-<!-- spinner Area End -->
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border text-primary spinner" id="spinner" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- spinner Area End -->
 
 
     <!-- Error Message Area Start -->
     <div id="error-message" class="text-center"></div>
-    
-     <!-- Error Message Area End -->
-     <div class="text-center" id="not-found"></div>
 
-     <!-- Search Result  Start-->
+    <!-- Error Message Area End -->
+    <div class="text-center" id="not-found"></div>
+
+    <!-- Search Result  Start-->
     <div id="search-result" class="text-center"></div>
     <!-- Search Result End  -->
 
-     
+    <!-- Display Book Start  -->
+
+    <div id="profile-book"> </div>
+    <!-- Display Book End  -->
 
     <!-- Bootstrap js  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
